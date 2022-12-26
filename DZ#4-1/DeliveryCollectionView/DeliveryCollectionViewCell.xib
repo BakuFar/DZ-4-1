@@ -41,6 +41,14 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="50" height="39"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="18"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="deliveryImageView" destination="8pt-WW-XnB" id="7Xq-AK-qB9"/>
                 <outlet property="deliveryLabel" destination="LEq-da-eLa" id="Trm-VR-cnq"/>

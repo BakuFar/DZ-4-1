@@ -64,14 +64,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wNq-vr-La3">
-                                <rect key="frame" x="0.0" y="374" width="393" height="395"/>
+                                <rect key="frame" x="0.0" y="374" width="393" height="385"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QT2-Qo-if0">
+                                <rect key="frame" x="185.66666666666666" y="758.66666666666663" width="22" height="21.333333333333371"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="WOr-nq-uyl"/>
+                                    <constraint firstAttribute="width" constant="22" id="c2J-lo-gAX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYu-Tb-6XW">
+                                <rect key="frame" x="176" y="773" width="41" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yf3-mI-N3p" secondAttribute="trailing" id="09d-C9-JHo"/>
+                            <constraint firstItem="nYu-Tb-6XW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C9M-eD-pvI"/>
+                            <constraint firstItem="QT2-Qo-if0" firstAttribute="top" secondItem="wNq-vr-La3" secondAttribute="bottom" id="CQ6-Lc-ow8"/>
+                            <constraint firstItem="nYu-Tb-6XW" firstAttribute="top" secondItem="QT2-Qo-if0" secondAttribute="bottom" constant="-8" id="DYP-MD-R59"/>
                             <constraint firstItem="SfF-5H-hoE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="IaM-wH-ThI"/>
                             <constraint firstItem="vk1-cO-73q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8o-dB-LLP"/>
                             <constraint firstItem="4hk-lO-7pI" firstAttribute="top" secondItem="vk1-cO-73q" secondAttribute="bottom" constant="18" id="LIr-oo-kWa"/>
@@ -81,8 +98,9 @@
                             <constraint firstItem="SfF-5H-hoE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="T1L-Rc-Pm9"/>
                             <constraint firstItem="SfF-5H-hoE" firstAttribute="top" secondItem="yf3-mI-N3p" secondAttribute="bottom" constant="31" id="X7x-3h-Cfb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vk1-cO-73q" secondAttribute="trailing" id="ZGY-oH-ds8"/>
+                            <constraint firstItem="QT2-Qo-if0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cfH-kb-AEI"/>
                             <constraint firstAttribute="trailing" secondItem="SfF-5H-hoE" secondAttribute="trailing" constant="12" id="fbV-QL-AM1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wNq-vr-La3" secondAttribute="bottom" id="hE5-3Z-GDQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wNq-vr-La3" secondAttribute="bottom" constant="10" id="hE5-3Z-GDQ"/>
                             <constraint firstItem="wNq-vr-La3" firstAttribute="top" secondItem="4hk-lO-7pI" secondAttribute="bottom" constant="16" id="mVr-ei-BI0"/>
                             <constraint firstItem="vk1-cO-73q" firstAttribute="top" secondItem="SfF-5H-hoE" secondAttribute="bottom" constant="32" id="nMO-XI-lVk"/>
                             <constraint firstItem="4hk-lO-7pI" firstAttribute="top" secondItem="YRz-pR-DAM" secondAttribute="bottom" constant="-20" id="tA5-c7-KCO"/>
@@ -104,6 +122,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

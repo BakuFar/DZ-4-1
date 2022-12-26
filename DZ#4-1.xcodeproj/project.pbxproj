@@ -79,6 +79,7 @@
 				F06587B029587923005017E9 /* StoresCollectionView */,
 				F06587892958549D005017E9 /* ViewController.swift */,
 				F065878B2958549D005017E9 /* Main.storyboard */,
+				F065878E2958549E005017E9 /* Assets.xcassets */,
 				F06587932958549E005017E9 /* Info.plist */,
 				F06587872958549D005017E9 /* SceneDelegate.swift */,
 				F06587852958549D005017E9 /* AppDelegate.swift */,
@@ -100,7 +101,6 @@
 		F06587B029587923005017E9 /* StoresCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				F065878E2958549E005017E9 /* Assets.xcassets */,
 				F06587B129587964005017E9 /* StoresCollectionViewCell.swift */,
 				F06587B229587964005017E9 /* StoresCollectionViewCell.xib */,
 				F06587B5295879D5005017E9 /* StoresModel.swift */,

@@ -17,6 +17,4 @@ class StoresCollectionViewCell: UICollectionViewCell {
     }
     
     public static let reusId = String(describing: StoresCollectionViewCell.self)
-
-    
 }

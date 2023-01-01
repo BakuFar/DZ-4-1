@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F020B9DC295DA75A002BA333 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F020B9DB295DA75A002BA333 /* DetailVC.swift */; };
 		F06587862958549D005017E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06587852958549D005017E9 /* AppDelegate.swift */; };
 		F06587882958549D005017E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06587872958549D005017E9 /* SceneDelegate.swift */; };
 		F065878A2958549D005017E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06587892958549D005017E9 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F020B9DB295DA75A002BA333 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		F06587822958549D005017E9 /* DZ#4-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DZ#4-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F06587852958549D005017E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F06587872958549D005017E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F020B9DA295DA733002BA333 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F06587892958549D005017E9 /* ViewController.swift */,
+				F020B9DB295DA75A002BA333 /* DetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F04A646F2961D9F400B30A92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F06587C2295893D5005017E9 /* ProductModel.swift */,
+				F06587A829585C1D005017E9 /* DeliveryModel.swift */,
+				F06587B5295879D5005017E9 /* StoresModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F04A64702961DA0500B30A92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F06587B029587923005017E9 /* StoresCollectionView */,
+				F065879929585539005017E9 /* DeliveryCollectionView */,
+				F06587B729589313005017E9 /* ProductTableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F04A64712961DA1700B30A92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F06587902958549E005017E9 /* LaunchScreen.storyboard */,
+				F06587932958549E005017E9 /* Info.plist */,
+				F065878E2958549E005017E9 /* Assets.xcassets */,
+				F065878B2958549D005017E9 /* Main.storyboard */,
+				F06587872958549D005017E9 /* SceneDelegate.swift */,
+				F06587852958549D005017E9 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F06587792958549D005017E9 = {
 			isa = PBXGroup;
 			children = (
@@ -74,16 +118,10 @@
 		F06587842958549D005017E9 /* DZ#4-1 */ = {
 			isa = PBXGroup;
 			children = (
-				F06587B729589313005017E9 /* ProductTableView */,
-				F065879929585539005017E9 /* DeliveryCollectionView */,
-				F06587B029587923005017E9 /* StoresCollectionView */,
-				F06587892958549D005017E9 /* ViewController.swift */,
-				F065878B2958549D005017E9 /* Main.storyboard */,
-				F065878E2958549E005017E9 /* Assets.xcassets */,
-				F06587932958549E005017E9 /* Info.plist */,
-				F06587872958549D005017E9 /* SceneDelegate.swift */,
-				F06587852958549D005017E9 /* AppDelegate.swift */,
-				F06587902958549E005017E9 /* LaunchScreen.storyboard */,
+				F04A646F2961D9F400B30A92 /* Model */,
+				F04A64702961DA0500B30A92 /* Views */,
+				F020B9DA295DA733002BA333 /* Controller */,
+				F04A64712961DA1700B30A92 /* Resources */,
 			);
 			path = "DZ#4-1";
 			sourceTree = "<group>";
@@ -93,7 +131,6 @@
 			children = (
 				F06587AA295861ED005017E9 /* DeliveryCollectionViewCell.swift */,
 				F06587AE2958633B005017E9 /* DeliveryCollectionViewCell.xib */,
-				F06587A829585C1D005017E9 /* DeliveryModel.swift */,
 			);
 			path = DeliveryCollectionView;
 			sourceTree = "<group>";
@@ -103,7 +140,6 @@
 			children = (
 				F06587B129587964005017E9 /* StoresCollectionViewCell.swift */,
 				F06587B229587964005017E9 /* StoresCollectionViewCell.xib */,
-				F06587B5295879D5005017E9 /* StoresModel.swift */,
 			);
 			path = StoresCollectionView;
 			sourceTree = "<group>";
@@ -113,7 +149,6 @@
 			children = (
 				F06587BE29589390005017E9 /* ProductTableViewCell.swift */,
 				F06587BF29589390005017E9 /* ProductTableViewCell.xib */,
-				F06587C2295893D5005017E9 /* ProductModel.swift */,
 			);
 			path = ProductTableView;
 			sourceTree = "<group>";
@@ -198,6 +233,7 @@
 				F065878A2958549D005017E9 /* ViewController.swift in Sources */,
 				F06587C3295893D5005017E9 /* ProductModel.swift in Sources */,
 				F06587B329587964005017E9 /* StoresCollectionViewCell.swift in Sources */,
+				F020B9DC295DA75A002BA333 /* DetailVC.swift in Sources */,
 				F06587862958549D005017E9 /* AppDelegate.swift in Sources */,
 				F06587A929585C1D005017E9 /* DeliveryModel.swift in Sources */,
 				F06587882958549D005017E9 /* SceneDelegate.swift in Sources */,
@@ -348,7 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "DZ#4-1/Info.plist";
+				INFOPLIST_FILE = "DZ#4-1/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -378,7 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "DZ#4-1/Info.plist";
+				INFOPLIST_FILE = "DZ#4-1/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

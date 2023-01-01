@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ProductCellDelegate: AnyObject {
+    func selectProduct(_ item: Product)
+}
+
 class ProductTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var productImageView: UIImageView!
@@ -17,9 +21,13 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet private weak var triangleImageView: UIImageView!
     @IBOutlet private weak var countryLabel: UILabel!
     
+    weak var delegate: ProductCellDelegate?
+    private var product: Product?
+    
     public static let reusId = String(describing: ProductTableViewCell.self)
     
     func display(item: Product) {
+        product = item
         productImageView.image = UIImage(named: item.productImages)
         discountImageView.image = UIImage(named: item.productDiscountImage)
         productNameLabel.text = item.productName
@@ -27,7 +35,16 @@ class ProductTableViewCell: UITableViewCell {
         distanceLabel.text = item.productDistance
         triangleImageView.image = UIImage(named: item.productTriangleImage)
         countryLabel.text = item.productCountry
+        
+        productImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        productImageView.addGestureRecognizer(tap)
     }
-
     
+    @objc func tapped() {
+        guard let product = product else {
+            return
+        }
+        delegate?.selectProduct(product)
+    }
 }

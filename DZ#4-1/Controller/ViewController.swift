@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 class ViewController: UIViewController {
     
     private let deliveryArray: [Delivery] = [
@@ -139,6 +140,7 @@ class ViewController: UIViewController {
             forCellWithReuseIdentifier: DeliveryCollectionViewCell.reusId
         )
     }
+    
     private func configureStoresCollectionView() {
         storesCollectionView.dataSource = self
         storesCollectionView.delegate = self
@@ -227,6 +229,7 @@ extension ViewController: UITableViewDataSource {
             for: indexPath
         ) as! ProductTableViewCell
         let product = productArray[indexPath.row]
+        cell.delegate = self
         cell.display(item: product)
         return cell
     }
@@ -238,3 +241,12 @@ extension ViewController: UITableViewDelegate {
     }
 }
   
+extension ViewController: ProductCellDelegate {
+    func selectProduct(_ item: Product) {
+        let targetVC = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = targetVC.instantiateViewController(withIdentifier: DetailVC.reusId) as! DetailVC
+        navigationController?.pushViewController(detailVC, animated: true)
+        detailVC.labelText = item.productName
+        detailVC.imageName = UIImage(named: item.productImages)!
+    }
+}

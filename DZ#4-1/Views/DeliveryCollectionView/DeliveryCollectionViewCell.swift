@@ -22,9 +22,8 @@ class DeliveryCollectionViewCell: UICollectionViewCell {
     
     public static let reusId = String(describing: DeliveryCollectionViewCell.self)
 
-    func display(item: Delivery) {
+    func display(item: DeliveryModel) {
         deliveryImageView.image = UIImage(named: item.deliceryImage)
         deliveryLabel.text = item.deliveryText
-        deliveryLabel.textColor = item.deliveryTextColor
     }
 }

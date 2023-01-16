@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProductCellDelegate: AnyObject {
-    func selectProduct(_ item: Product)
+    func selectProduct(_ item: ProductModel)
 }
 
 class ProductTableViewCell: UITableViewCell {
@@ -22,11 +22,11 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet private weak var countryLabel: UILabel!
     
     weak var delegate: ProductCellDelegate?
-    private var product: Product?
+    private var product: ProductModel?
     
     public static let reusId = String(describing: ProductTableViewCell.self)
     
-    func display(item: Product) {
+    func display(item: ProductModel) {
         product = item
         productImageView.image = UIImage(named: item.productImages)
         discountImageView.image = UIImage(named: item.productDiscountImage)

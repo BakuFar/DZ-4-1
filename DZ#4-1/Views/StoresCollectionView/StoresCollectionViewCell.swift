@@ -11,7 +11,7 @@ class StoresCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var storeImageView: UIImageView!
     @IBOutlet weak var storeNameLabel: UILabel!
     
-    func display(item: Store) {
+    func display(item: StoreModel) {
         storeImageView.image = UIImage(named: item.storeImage)
         storeNameLabel.text = item.storeName
     }

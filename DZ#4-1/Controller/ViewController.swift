@@ -9,114 +9,117 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let deliveryArray: [Delivery] = [
-        Delivery(
-            deliveryText: "Delivery",
-            deliveryTextColor: .white,
-            deliceryImage: "play",
-            deliveryBackgroundColor: .orange,
-            deliveryWidth: 105
-        ),
-        Delivery(
-            deliveryText: "Pickup",
-            deliveryTextColor: .green,
-            deliceryImage: "",
-            deliveryBackgroundColor: .white,
-            deliveryWidth: 80
-        ),
-        Delivery(
-            deliveryText: "Catering",
-            deliveryTextColor: .green,
-            deliceryImage: "",
-            deliveryBackgroundColor: .white,
-            deliveryWidth: 90
-        ),
-        Delivery(
-            deliveryText: "Curbside",
-            deliveryTextColor: .green,
-            deliceryImage: "",
-            deliveryBackgroundColor: .white,
-            deliveryWidth: 90
-        ),
-        Delivery(
-            deliveryText: "Delivery",
-            deliveryTextColor: .white,
-            deliceryImage: "play",
-            deliveryBackgroundColor: .orange,
-            deliveryWidth: 105
-        ),
-        Delivery(
-            deliveryText: "Pickup",
-            deliveryTextColor: .green,
-            deliceryImage: "",
-            deliveryBackgroundColor: .white,
-            deliveryWidth: 80
-        ),
-        Delivery(
-            deliveryText: "Catering",
-            deliveryTextColor: .green,
-            deliceryImage: "",
-            deliveryBackgroundColor: .white,
-            deliveryWidth: 90
-        ),
-        Delivery(
-            deliveryText: "Curbside",
-            deliveryTextColor: .green,
-            deliceryImage: "",
-            deliveryBackgroundColor: .white,
-            deliveryWidth: 90
-        )
-    ]
+    var deliveryArray = [DeliveryModel] ()
+//    private let deliveryArray: [Delivery] = [
+//        Delivery(
+//            deliveryText: "Delivery",
+//            deliveryTextColor: .white,
+//            deliceryImage: "play",
+//            deliveryBackgroundColor: .orange,
+//            deliveryWidth: 105
+//        ),
+//        Delivery(
+//            deliveryText: "Pickup",
+//            deliveryTextColor: .green,
+//            deliceryImage: "",
+//            deliveryBackgroundColor: .white,
+//            deliveryWidth: 80
+//        ),
+//        Delivery(
+//            deliveryText: "Catering",
+//            deliveryTextColor: .green,
+//            deliceryImage: "",
+//            deliveryBackgroundColor: .white,
+//            deliveryWidth: 90
+//        ),
+//        Delivery(
+//            deliveryText: "Curbside",
+//            deliveryTextColor: .green,
+//            deliceryImage: "",
+//            deliveryBackgroundColor: .white,
+//            deliveryWidth: 90
+//        ),
+//        Delivery(
+//            deliveryText: "Delivery",
+//            deliveryTextColor: .white,
+//            deliceryImage: "play",
+//            deliveryBackgroundColor: .orange,
+//            deliveryWidth: 105
+//        ),
+//        Delivery(
+//            deliveryText: "Pickup",
+//            deliveryTextColor: .green,
+//            deliceryImage: "",
+//            deliveryBackgroundColor: .white,
+//            deliveryWidth: 80
+//        ),
+//        Delivery(
+//            deliveryText: "Catering",
+//            deliveryTextColor: .green,
+//            deliceryImage: "",
+//            deliveryBackgroundColor: .white,
+//            deliveryWidth: 90
+//        ),
+//        Delivery(
+//            deliveryText: "Curbside",
+//            deliveryTextColor: .green,
+//            deliceryImage: "",
+//            deliveryBackgroundColor: .white,
+//            deliveryWidth: 90
+//        )
+//    ]
     
-    private let storeArray: [Store] = [
-        Store(storeName: "Takeaways", storeImage: "Store1"),
-        Store(storeName: "Grocery", storeImage: "Store2"),
-        Store(storeName: "Convenience", storeImage: "Store3"),
-        Store(storeName: "Pharmacy", storeImage: "Store4"),
-        Store(storeName: "Takeaways", storeImage: "Store1"),
-        Store(storeName: "Grocery", storeImage: "Store2"),
-        Store(storeName: "Convenience", storeImage: "Store3"),
-        Store(storeName: "Pharmacy", storeImage: "Store4")
-    ]
+    var storeArray = [StoreModel] ()
+//    private let storeArray: [Store] = [
+//        Store(storeName: "Takeaways", storeImage: "Store1"),
+//        Store(storeName: "Grocery", storeImage: "Store2"),
+//        Store(storeName: "Convenience", storeImage: "Store3"),
+//        Store(storeName: "Pharmacy", storeImage: "Store4"),
+//        Store(storeName: "Takeaways", storeImage: "Store1"),
+//        Store(storeName: "Grocery", storeImage: "Store2"),
+//        Store(storeName: "Convenience", storeImage: "Store3"),
+//        Store(storeName: "Pharmacy", storeImage: "Store4")
+//    ]
     
-    private let productArray: [Product] = [
-        Product(
-            productName: "Burger Craze",
-            productImages: "Product1",
-            productDiscountImage: "Discount",
-            productTime: "15 - 20 min",
-            productDistance: "1.5 km away",
-            productTriangleImage: "Navigate",
-            productCountry: "American"
-        ),
-        Product(
-            productName: "Vegetarian Pizza",
-            productImages: "Product2",
-            productDiscountImage: "",
-            productTime: "10 -15 min",
-            productDistance: "",
-            productTriangleImage: "",
-            productCountry: "Italian"
-        ),
-        Product(
-            productName: "Burger Craze",
-            productImages: "Product1",
-            productDiscountImage: "Discount",
-            productTime: "15 - 20 min",
-            productDistance: "1.5 km away",
-            productTriangleImage: "Navigate",
-            productCountry: "American"
-        ),
-        Product(
-            productName: "Vegetarian Pizza",
-            productImages: "Product2",
-            productDiscountImage: "",
-            productTime: "10 -15 min",
-            productDistance: "",
-            productTriangleImage: "",
-            productCountry: "Italian"
-        )
-    ]
+    var productArray = [ProductModel] ()
+//    private let productArray: [Product] = [
+//        Product(
+//            productName: "Burger Craze",
+//            productImages: "Product1",
+//            productDiscountImage: "Discount",
+//            productTime: "15 - 20 min",
+//            productDistance: "1.5 km away",
+//            productTriangleImage: "Navigate",
+//            productCountry: "American"
+//        ),
+//        Product(
+//            productName: "Vegetarian Pizza",
+//            productImages: "Product2",
+//            productDiscountImage: "",
+//            productTime: "10 -15 min",
+//            productDistance: "",
+//            productTriangleImage: "",
+//            productCountry: "Italian"
+//        ),
+//        Product(
+//            productName: "Burger Craze",
+//            productImages: "Product1",
+//            productDiscountImage: "Discount",
+//            productTime: "15 - 20 min",
+//            productDistance: "1.5 km away",
+//            productTriangleImage: "Navigate",
+//            productCountry: "American"
+//        ),
+//        Product(
+//            productName: "Vegetarian Pizza",
+//            productImages: "Product2",
+//            productDiscountImage: "",
+//            productTime: "10 -15 min",
+//            productDistance: "",
+//            productTriangleImage: "",
+//            productCountry: "Italian"
+//        )
+//    ]
     
     @IBOutlet private weak var deliveryCollectionView: UICollectionView!
     @IBOutlet private weak var storesCollectionView: UICollectionView!
@@ -127,6 +130,66 @@ class ViewController: UIViewController {
         configureDeliveryCollectionView()
         configureStoresCollectionView()
         configureProductTableView()
+        productArray = Product.shared.parse(productJson)
+        storeArray = Store.shared.parse(storeJson)
+        deliveryArray = Delivery.shared.parse(deliveryJson)
+    }
+    
+    class Product {
+        
+        static let shared = Product()
+        
+        func parse(_ json: String) -> [ProductModel] {
+            var product = [ProductModel] ()
+            let productData = Data(productJson.utf8)
+            let decoder = JSONDecoder()
+            
+            do {
+                let convertedData = try decoder.decode([ProductModel].self, from: productData)
+                product = convertedData
+            } catch {
+                print("Error is: \(error.localizedDescription)")
+            }
+            return product
+        }
+    }
+    
+    class Store {
+        
+        static let shared = Store()
+        
+        func parse(_ json: String) -> [StoreModel] {
+            var store = [StoreModel] ()
+            let storeData = Data(storeJson.utf8)
+            let decoder = JSONDecoder()
+            
+            do {
+                let convertedData = try decoder.decode([StoreModel].self, from: storeData)
+                store = convertedData
+            } catch {
+                print("Error is: \(error.localizedDescription)")
+            }
+            return store
+        }
+    }
+    
+    class Delivery {
+        
+        static let shared = Delivery()
+        
+        func parse(_ json: String) -> [DeliveryModel] {
+            var delivery = [DeliveryModel] ()
+            let deliveryData = Data(deliveryJson.utf8)
+            let decoder = JSONDecoder()
+            
+            do {
+                let convertedData = try decoder.decode([DeliveryModel].self, from: deliveryData)
+                delivery = convertedData
+            } catch {
+                print("Error is: \(error.localizedDescription)")
+            }
+            return delivery
+        }
     }
     
     private func configureDeliveryCollectionView() {
@@ -190,7 +253,6 @@ extension ViewController: UICollectionViewDataSource {
             ) as! DeliveryCollectionViewCell
             let delivery = deliveryArray[indexPath.row]
             cell.display(item: delivery)
-            cell.backgroundColor = deliveryArray[indexPath.row].deliveryBackgroundColor
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(
@@ -242,7 +304,7 @@ extension ViewController: UITableViewDelegate {
 }
   
 extension ViewController: ProductCellDelegate {
-    func selectProduct(_ item: Product) {
+    func selectProduct(_ item: ProductModel) {
         let targetVC = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = targetVC.instantiateViewController(withIdentifier: DetailVC.reusId) as! DetailVC
         navigationController?.pushViewController(detailVC, animated: true)

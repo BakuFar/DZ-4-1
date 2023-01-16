@@ -7,10 +7,51 @@
 
 import UIKit
 
-struct Delivery {
+var deliveryJson = """
+[
+    {
+        "deliveryText": "Delivery",
+        "deliceryImage": "play",
+        "deliveryWidth": 105
+    },
+    {
+        "deliveryText": "Pickup",
+        "deliceryImage": "",
+        "deliveryWidth": 80
+    },
+    {
+        "deliveryText": "Catering",
+        "deliceryImage": "",
+        "deliveryWidth": 90
+    {
+        "deliveryText": "Curbside",
+        "deliceryImage": "",
+        "deliveryWidth": 90
+    },
+    {
+        "deliveryText": "Delivery",
+        "deliceryImage": "play",
+        "deliveryWidth": 105
+    },
+    {
+        "deliveryText": "Pickup",
+        "deliceryImage": "",
+        "deliveryWidth": 80
+    },
+    {
+        "deliveryText": "Catering",
+        "deliceryImage": "",
+        "deliveryWidth": 90
+    {
+        "deliveryText": "Curbside",
+        "deliceryImage": "",
+        "deliveryWidth": 90
+    }
+]
+"""
+
+struct DeliveryModel: Decodable {
     var deliveryText: String
-    var deliveryTextColor: UIColor
     var deliceryImage: String
-    var deliveryBackgroundColor: UIColor
     var deliveryWidth: Int
 }
